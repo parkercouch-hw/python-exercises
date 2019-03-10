@@ -14,4 +14,7 @@
 def multiply_by(nums, multiplier):
     return [n * multiplier for n in nums]
 
-print(multiply_by([1, 2, 3], 5))
+x = [1, 2, 3]
+print(x)
+print(multiply_by(x, 5))
+print(x)

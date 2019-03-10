@@ -10,14 +10,24 @@
 # > 120
 #
 
+
+# Pythonic?
+from math import factorial
+
+for i in range(10):
+    print(f"{i}!: {factorial(i)}")
+
+
 # One-liner
 from functools import reduce
 from operator import mul
+
 def factorialReduce(n):
     return reduce(mul, range(1, n + 1), 1)
 
 for i in range(10):
     print(f"{i}!: {factorialReduce(i)}")
+print(factorialReduce(10000))
 
 
 # Recursive iteration
@@ -27,13 +37,6 @@ def factorialIter(n):
         return acc if i > n else iter(i * acc, i + 1)
     return iter(1, 1)
 
+
 for i in range(10):
     print(f"{i}!: {factorialIter(i)}")
-
-
-
-# Pythonic?
-from math import factorial
-
-for i in range(10):
-    print(f"{i}!: {factorial(i)}")
